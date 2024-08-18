@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "pixel-generation",
+	"version": "${version}",
+	"name": "Pixel Generation",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/pixel-generation/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.jacky0987.pixelgeneration.PixelGeneration"
+		],
+		"client": [
+			"com.jacky0987.pixelgeneration.PixelGenerationClient"
+		],
+		"fabric-datagen": [
+			"com.jacky0987.pixelgeneration.PixelGenerationDataGenerator"
+		]
+	},
+	"mixins": [
+		"pixel-generation.mixins.json",
+		{
+			"config": "pixel-generation.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
